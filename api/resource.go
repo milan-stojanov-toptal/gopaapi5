@@ -96,6 +96,22 @@ const (
 	OffersSummariesLowestPrice Resource = "Offers.Summaries.LowestPrice"
 	// OffersSummariesOfferCount constant for Offers.Summaries.OfferCount resource
 	OffersSummariesOfferCount Resource = "Offers.Summaries.OfferCount"
+	// OffersV2ListingsAvailability constant for OffersV2.Listings.Availability resource
+	OffersV2ListingsAvailability Resource = "OffersV2.Listings.Availability"
+	// OffersV2ListingsCondition constant for OffersV2.Listings.Condition resource
+	OffersV2ListingsCondition Resource = "OffersV2.Listings.Condition"
+	// OffersV2ListingsDealDetails constant for OffersV2.Listings.DealDetails resource
+	OffersV2ListingsDealDetails Resource = "OffersV2.Listings.DealDetails"
+	// OffersV2ListingsIsBuyBoxWinner constant for OffersV2.Listings.IsBuyBoxWinner resource
+	OffersV2ListingsIsBuyBoxWinner Resource = "OffersV2.Listings.IsBuyBoxWinner"
+	// OffersV2ListingsLoyaltyPoints constant for OffersV2.Listings.LoyaltyPoints resource
+	OffersV2ListingsLoyaltyPoints Resource = "OffersV2.Listings.LoyaltyPoints"
+	// OffersV2ListingsMerchantInfo constant for OffersV2.Listings.MerchantInfo resource
+	OffersV2ListingsMerchantInfo Resource = "OffersV2.Listings.MerchantInfo"
+	// OffersV2ListingsPrice constant for OffersV2.Listings.Price resource
+	OffersV2ListingsPrice Resource = "OffersV2.Listings.Price"
+	// OffersV2ListingsType constant for OffersV2.Listings.Type resource
+	OffersV2ListingsType Resource = "OffersV2.Listings.Type"
 	// ParentASIN constant for ParentASIN resource
 	ParentASIN Resource = "ParentASIN"
 	// RentalOffersListingsAvailabilityMaxOrderQuantity constant for RentalOffers.Listings.Availability.MaxOrderQuantity resource

@@ -93,6 +93,14 @@ var resourceOperationsMap = map[Resource][]Operation{
 	VariationSummaryPriceLowestPrice:                       {GetVariations},
 	VariationSummaryVariationDimension:                     {GetVariations},
 	SearchRefinements:                                      {SearchItems},
+	OffersV2ListingsPrice:                                  {GetItems, SearchItems},
+	OffersV2ListingsAvailability:                           {GetItems, SearchItems},
+	OffersV2ListingsCondition:                              {GetItems, SearchItems},
+	OffersV2ListingsMerchantInfo:                           {GetItems, SearchItems},
+	OffersV2ListingsIsBuyBoxWinner:                         {GetItems, SearchItems},
+	OffersV2ListingsDealDetails:                            {GetItems, SearchItems},
+	OffersV2ListingsType:                                   {GetItems, SearchItems},
+	OffersV2ListingsLoyaltyPoints:                          {GetItems, SearchItems},
 }
 
 // Validate validates resources for an operation

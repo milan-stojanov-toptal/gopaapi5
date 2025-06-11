@@ -59,6 +59,7 @@ type Item struct {
 	Images              Images               `json:"Images,omitempty"`
 	ItemInfo            ItemInfo             `json:"ItemInfo,omitempty"`
 	Offers              Offers               `json:"Offers,omitempty"`
+	OffersV2            *OffersV2            `json:"OffersV2,omitempty"`
 	ParentASIN          string               `json:"ParentASIN,omitempty"`
 	RentalOffers        RentalOffers         `json:"RentalOffers,omitempty"`
 	Score               float32              `json:"Score,omitempty"`
@@ -437,4 +438,88 @@ type OfferSavings struct {
 	DisplayAmount string  `json:"DisplayAmount,omitempty"`
 	Percentage    int     `json:"Percentage,omitempty"`
 	PricePerUnit  float32 `json:"PricePerUnit,omitempty"`
+}
+
+// New structs to support OfferV2!
+
+// OffersV2 represents the newer offers structure
+type OffersV2 struct {
+	Listings []OfferV2Listing `json:"Listings,omitempty"`
+}
+
+// OfferV2Listing represents a single offer in OffersV2
+type OfferV2Listing struct {
+	Availability   *OfferV2Availability  `json:"Availability,omitempty"`
+	Condition      *OfferV2Condition     `json:"Condition,omitempty"`
+	DealDetails    *OfferV2DealDetails   `json:"DealDetails,omitempty"`
+	IsBuyBoxWinner bool                  `json:"IsBuyBoxWinner,omitempty"`
+	LoyaltyPoints  *OfferV2LoyaltyPoints `json:"LoyaltyPoints,omitempty"`
+	MerchantInfo   *OfferV2MerchantInfo  `json:"MerchantInfo,omitempty"`
+	Price          *OfferV2Price         `json:"Price,omitempty"`
+	Type           string                `json:"Type,omitempty"` // LIGHTNING_DEAL, SUBSCRIBE_AND_SAVE
+	ViolatesMAP    bool                  `json:"ViolatesMAP,omitempty"`
+}
+
+// OfferV2Availability represents availability information
+type OfferV2Availability struct {
+	MaxOrderQuantity int    `json:"MaxOrderQuantity,omitempty"`
+	Message          string `json:"Message,omitempty"`
+	MinOrderQuantity int    `json:"MinOrderQuantity,omitempty"`
+	Type             string `json:"Type,omitempty"` // AVAILABLE_DATE, IN_STOCK, IN_STOCK_SCARCE, LEADTIME, OUT_OF_STOCK, PREORDER, UNAVAILABLE, UNKNOWN
+}
+
+// OfferV2Condition represents condition information
+type OfferV2Condition struct {
+	ConditionNote string `json:"ConditionNote,omitempty"`
+	SubCondition  string `json:"SubCondition,omitempty"` // LikeNew, Good, VeryGood, Acceptable, Refurbished, OEM, OpenBox, Unknown
+	Value         string `json:"Value,omitempty"`        // New, Used, Refurbished, Unknown
+}
+
+// OfferV2DealDetails represents deal information
+type OfferV2DealDetails struct {
+	AccessType                        string `json:"AccessType,omitempty"`                        // ALL, PRIME_EARLY_ACCESS, PRIME_EXCLUSIVE
+	Badge                             string `json:"Badge,omitempty"`                             // Limited Time Deal, With Prime, Black Friday Deal, Ends In
+	EarlyAccessDurationInMilliseconds int64  `json:"EarlyAccessDurationInMilliseconds,omitempty"` // milliseconds for Prime early access
+	EndTime                           string `json:"EndTime,omitempty"`                           // UTC deal end time
+	PercentClaimed                    int    `json:"PercentClaimed,omitempty"`                    // how much deal capacity is consumed
+	StartTime                         string `json:"StartTime,omitempty"`                         // UTC deal start time
+}
+
+// OfferV2LoyaltyPoints represents loyalty points (Amazon Japan only)
+type OfferV2LoyaltyPoints struct {
+	Points int `json:"Points,omitempty"`
+}
+
+// OfferV2MerchantInfo represents merchant information
+type OfferV2MerchantInfo struct {
+	Id   string `json:"Id,omitempty"`
+	Name string `json:"Name,omitempty"`
+}
+
+// OfferV2Price represents pricing information
+type OfferV2Price struct {
+	Money        *OfferV2Money       `json:"Money,omitempty"`
+	PricePerUnit *OfferV2Money       `json:"PricePerUnit,omitempty"`
+	SavingBasis  *OfferV2SavingBasis `json:"SavingBasis,omitempty"`
+	Savings      *OfferV2Savings     `json:"Savings,omitempty"`
+}
+
+// OfferV2Money represents monetary amounts (common struct used for representing money)
+type OfferV2Money struct {
+	Amount        float64 `json:"Amount,omitempty"`        // BigDecimal in docs
+	Currency      string  `json:"Currency,omitempty"`      // USD, EUR, etc.
+	DisplayAmount string  `json:"DisplayAmount,omitempty"` // formatted amount like "$59.49"
+}
+
+// OfferV2SavingBasis represents the reference value used to calculate savings
+type OfferV2SavingBasis struct {
+	Money                *OfferV2Money `json:"Money,omitempty"`
+	SavingBasisType      string        `json:"SavingBasisType,omitempty"`      // LIST_PRICE, LOWEST_PRICE, LOWEST_PRICE_STRIKETHROUGH, WAS_PRICE
+	SavingBasisTypeLabel string        `json:"SavingBasisTypeLabel,omitempty"` // "List Price", etc.
+}
+
+// OfferV2Savings represents savings information
+type OfferV2Savings struct {
+	Money      *OfferV2Money `json:"Money,omitempty"`
+	Percentage int           `json:"Percentage,omitempty"`
 }
