@@ -498,10 +498,10 @@ type OfferV2MerchantInfo struct {
 
 // OfferV2Price represents pricing information
 type OfferV2Price struct {
-	Money        OfferV2Money       `json:"Money,omitempty"`
-	PricePerUnit OfferV2Money       `json:"PricePerUnit,omitempty"`
-	SavingBasis  OfferV2SavingBasis `json:"SavingBasis,omitempty"`
-	Savings      OfferV2Savings     `json:"Savings,omitempty"`
+	Money        OfferV2Money        `json:"Money,omitempty"`
+	PricePerUnit OfferV2Money        `json:"PricePerUnit,omitempty"`
+	SavingBasis  *OfferV2SavingBasis `json:"SavingBasis,omitempty"`
+	Savings      *OfferV2Savings     `json:"Savings,omitempty"`
 }
 
 // OfferV2Money represents monetary amounts
