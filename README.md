@@ -1,8 +1,8 @@
 # gopaapi5 #
 
 [![Build Status](https://travis-ci.org/utekaravinash/gopaapi5.svg?branch=master)](https://travis-ci.org/utekaravinash/gopaapi5)
-[![Go Report Card](https://goreportcard.com/badge/github.com/utekaravinash/gopaapi5)](https://goreportcard.com/report/github.com/utekaravinash/gopaapi5)
-[![GoDoc](https://godoc.org/github.com/utekaravinash/gopaapi5?status.svg)](https://godoc.org/github.com/utekaravinash/gopaapi5)
+[![Go Report Card](https://goreportcard.com/badge/github.com/milan-stojanov-toptal/gopaapi5)](https://goreportcard.com/report/github.com/milan-stojanov-toptal/gopaapi5)
+[![GoDoc](https://godoc.org/github.com/milan-stojanov-toptal/gopaapi5?status.svg)](https://godoc.org/github.com/milan-stojanov-toptal/gopaapi5)
 [![Coverage Status](https://coveralls.io/repos/github/utekaravinash/gopaapi5/badge.svg?branch=master)](https://coveralls.io/github/utekaravinash/gopaapi5?branch=master)
 
 gopaapi5 is a Go client library for accessing the [Amazon Product Advertising API 5.0](https://webservices.amazon.com/paapi5/documentation/).
@@ -12,7 +12,7 @@ gopaapi5 is a Go client library for accessing the [Amazon Product Advertising AP
 Install package:
 
 ```bash
-go get -u github.com/utekaravinash/gopaapi5
+go get -u github.com/milan-stojanov-toptal/gopaapi5
 ```
 
 Here's an example for GetBrowseNodes operation:
@@ -24,8 +24,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/utekaravinash/gopaapi5"
-	"github.com/utekaravinash/gopaapi5/api"
+	"github.com/milan-stojanov-toptal/gopaapi5"
+	"github.com/milan-stojanov-toptal/gopaapi5/api"
 )
 
 const tmpl = `Id: %s
@@ -74,10 +74,10 @@ func main() {
 
 This client library exposes these operations for Amazon Product Advertising API 5.0 _(click on links for their examples)_:
 
-- [GetBrowseNodes](https://github.com/utekaravinash/gopaapi5/blob/master/_examples/get_browse_nodes/main.go)
-- [GetItems](https://github.com/utekaravinash/gopaapi5/blob/master/_examples/get_items/main.go)
-- [GetVariations](https://github.com/utekaravinash/gopaapi5/blob/master/_examples/get_variations/main.go)
-- [SearchItems](https://github.com/utekaravinash/gopaapi5/blob/master/_examples/search_items/main.go)
+- [GetBrowseNodes](https://github.com/milan-stojanov-toptal/gopaapi5/blob/master/_examples/get_browse_nodes/main.go)
+- [GetItems](https://github.com/milan-stojanov-toptal/gopaapi5/blob/master/_examples/get_items/main.go)
+- [GetVariations](https://github.com/milan-stojanov-toptal/gopaapi5/blob/master/_examples/get_variations/main.go)
+- [SearchItems](https://github.com/milan-stojanov-toptal/gopaapi5/blob/master/_examples/search_items/main.go)
 
 _Use SetHttpClient() method of Client struct to set a custom HTTP client._
 
@@ -87,4 +87,4 @@ _Use SetHttpClient() method of Client struct to set a custom HTTP client._
 
 ## License ##
 
-[BSD 3-Clause](https://github.com/utekaravinash/gopaapi5/blob/master/LICENSE)
+[BSD 3-Clause](https://github.com/milan-stojanov-toptal/gopaapi5/blob/master/LICENSE)

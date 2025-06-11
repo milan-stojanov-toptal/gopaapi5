@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/utekaravinash/gopaapi5/api"
+	"github.com/milan-stojanov-toptal/gopaapi5/api"
 )
 
 func TestGetBrowseNodes(t *testing.T) {

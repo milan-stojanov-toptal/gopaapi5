@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/utekaravinash/gopaapi5/api"
+	"github.com/milan-stojanov-toptal/gopaapi5/api"
 )
 
 const (
