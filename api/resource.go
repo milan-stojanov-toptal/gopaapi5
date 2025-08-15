@@ -32,6 +32,8 @@ const (
 	ImagesVariantsMedium Resource = "Images.Variants.Medium"
 	// ImagesVariantsLarge constant for Images.Variants.Large resource
 	ImagesVariantsLarge Resource = "Images.Variants.Large"
+	// ImagesVariantsHighRes constant for Images.Variants.HighRes resource
+	ImagesVariantsHighRes Resource = "Images.Variants.HighRes"
 	// ItemInfoByLineInfo constant for ItemInfo.ByLineInfo resource
 	ItemInfoByLineInfo Resource = "ItemInfo.ByLineInfo"
 	// ItemInfoContentInfo constant for ItemInfo.ContentInfo resource

@@ -29,7 +29,7 @@ func main() {
 
 	// Construct request parameters for GetVariations operation
 	params := api.GetVariationsParams{
-		ASIN: "B01MD19OI2",
+		ASIN: "B08868QTGL",
 		Resources: []api.Resource{
 			api.BrowseNodeInfoBrowseNodes,
 			api.BrowseNodeInfoBrowseNodesAncestor,
@@ -43,6 +43,7 @@ func main() {
 			api.ImagesVariantsSmall,
 			api.ImagesVariantsMedium,
 			api.ImagesVariantsLarge,
+			api.ImagesVariantsHighRes,
 			api.ItemInfoByLineInfo,
 			api.ItemInfoContentInfo,
 			api.ItemInfoContentRating,

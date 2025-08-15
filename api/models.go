@@ -163,9 +163,10 @@ type Images struct {
 
 // ImageType represents ImageType object in json response
 type ImageType struct {
-	Small  ImageSize `json:"Small,omitempty"`
-	Medium ImageSize `json:"Medium,omitempty"`
-	Large  ImageSize `json:"Large,omitempty"`
+	Small   ImageSize `json:"Small,omitempty"`
+	Medium  ImageSize `json:"Medium,omitempty"`
+	Large   ImageSize `json:"Large,omitempty"`
+	HighRes ImageSize `json:"HiRes,omitempty"`
 }
 
 // ImageSize represents ImageSize object in json response
@@ -449,7 +450,7 @@ type OffersV2 struct {
 
 // OfferV2Listing represents a single offer in OffersV2 - all value types
 type OfferV2Listing struct {
-	Availability   OfferV2Availability  `json:"Availability,omitempty"`   
+	Availability   OfferV2Availability  `json:"Availability,omitempty"`
 	Condition      OfferV2Condition     `json:"Condition,omitempty"`
 	DealDetails    OfferV2DealDetails   `json:"DealDetails,omitempty"`
 	IsBuyBoxWinner bool                 `json:"IsBuyBoxWinner,omitempty"`

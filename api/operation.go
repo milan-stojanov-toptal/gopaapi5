@@ -44,6 +44,7 @@ var resourceOperationsMap = map[Resource][]Operation{
 	ImagesVariantsSmall:                                    {GetItems, GetVariations, SearchItems},
 	ImagesVariantsMedium:                                   {GetItems, GetVariations, SearchItems},
 	ImagesVariantsLarge:                                    {GetItems, GetVariations, SearchItems},
+	ImagesVariantsHighRes:                                  {GetItems, GetVariations, SearchItems},
 	ItemInfoByLineInfo:                                     {GetItems, GetVariations, SearchItems},
 	ItemInfoContentInfo:                                    {GetItems, GetVariations, SearchItems},
 	ItemInfoContentRating:                                  {GetItems, GetVariations, SearchItems},
