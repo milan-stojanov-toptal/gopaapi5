@@ -26,6 +26,8 @@ const (
 	ImagesPrimaryMedium Resource = "Images.Primary.Medium"
 	// ImagesPrimaryLarge constant for Images.Primary.Large resource
 	ImagesPrimaryLarge Resource = "Images.Primary.Large"
+	// ImagesPrimaryHighRes constant for Images.Primary.HighRes resource
+	ImagesPrimaryHighRes Resource = "Images.Primary.HighRes"
 	// ImagesVariantsSmall constant for Images.Variants.Small resource
 	ImagesVariantsSmall Resource = "Images.Variants.Small"
 	// ImagesVariantsMedium constant for Images.Variants.Medium resource

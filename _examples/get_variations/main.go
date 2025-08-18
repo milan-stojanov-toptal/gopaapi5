@@ -40,6 +40,7 @@ func main() {
 			api.ImagesPrimarySmall,
 			api.ImagesPrimaryMedium,
 			api.ImagesPrimaryLarge,
+			api.ImagesPrimaryHighRes,
 			api.ImagesVariantsSmall,
 			api.ImagesVariantsMedium,
 			api.ImagesVariantsLarge,
